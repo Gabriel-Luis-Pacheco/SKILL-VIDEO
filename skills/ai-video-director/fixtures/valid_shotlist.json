@@ -1,0 +1,51 @@
+{
+  "title": "Original motion exercise",
+  "fps": 30,
+  "duration_s": 15,
+  "shots": [
+    {
+      "id": "s1",
+      "start_s": 0,
+      "end_s": 3,
+      "intent": "introduce real object",
+      "visual": "macro close-up of physical object",
+      "audio": "material foley",
+      "method": "LIVE_ACTION",
+      "rights": "cleared",
+      "asset_status": "ready"
+    },
+    {
+      "id": "s2",
+      "start_s": 3,
+      "end_s": 6.5,
+      "intent": "cause and effect",
+      "visual": "object travels along controlled vector path",
+      "audio": "movement sonics",
+      "method": "REMOTION",
+      "rights": "cleared",
+      "asset_status": "ready"
+    },
+    {
+      "id": "s3",
+      "start_s": 6.5,
+      "end_s": 11,
+      "intent": "product proof",
+      "visual": "actual product demonstration recorded with consent",
+      "audio": "brief human statement",
+      "method": "CAPTURE",
+      "rights": "cleared",
+      "asset_status": "ready"
+    },
+    {
+      "id": "s4",
+      "start_s": 11,
+      "end_s": 15,
+      "intent": "payoff",
+      "visual": "verified product brand with end frame",
+      "audio": "licensed music resolves",
+      "method": "COMPOSITE",
+      "rights": "cleared",
+      "asset_status": "ready"
+    }
+  ]
+}

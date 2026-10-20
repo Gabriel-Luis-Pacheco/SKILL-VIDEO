@@ -1,0 +1,29 @@
+{
+  "title": "Should fail",
+  "fps": 30,
+  "duration_s": 15,
+  "shots": [
+    {
+      "id": "s1",
+      "start_s": 0,
+      "end_s": 4,
+      "intent": "hook",
+      "visual": "first",
+      "audio": "silence",
+      "method": "T2V",
+      "rights": "unknown",
+      "asset_status": "placeholder"
+    },
+    {
+      "id": "s1",
+      "start_s": 3,
+      "end_s": 6,
+      "intent": "proof",
+      "visual": "second",
+      "audio": "music",
+      "method": "T2V",
+      "rights": "pending",
+      "asset_status": "unconfirmed"
+    }
+  ]
+}
