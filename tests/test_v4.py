@@ -99,7 +99,7 @@ class RouterTest(unittest.TestCase):
         d.pop("cta_destination")
         r=router.route(d)
         self.assertFalse(r["blockers"])
-        self.assertIn("no automatic",r["creative_priorities"][0].lower() if "no automatic" in r["creative_priorities"][0].lower() else r["creative_priorities"][1].lower())
+        self.assertIn("poetically",r["creative_priorities"][1].lower())
     def test_character_canon_missing_blocks(self):
         d=fixture("brief_synthetic.json")
         d.update({"central_visual":"brand_character","available_tools":["rive"]})
