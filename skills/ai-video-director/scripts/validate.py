@@ -37,7 +37,7 @@ def validate_skill(root):
             errors.append("missing specialist reference: " + needed)
     for tool in ("timeline_compile.py", "campaign_matrix.py", "asset_preflight.py",
                  "captions_lint.py", "production_gate.py", "evidence_capture.py", "campaign_results.py",
-                 "independent_review.py", "brief_router.py", "new_video_project.py"):
+                 "independent_review.py", "brief_router.py", "new_video_project.py", "signal_qc.py"):
         if not (root / "scripts" / tool).is_file():
             errors.append("missing production validator: " + tool)
     if not (root / "examples/rendered-proof/render.py").is_file():

@@ -54,3 +54,5 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - ../scripts/new_video_project.py — scaffold seguro de projeto sem conteúdo inventado
 
 - 66-current-tool-capabilities.md — fornecedores atuais, documentação oficial, disponibilidade e ledger de capacidades por shot
+
+- ../scripts/signal_qc.py — alertas de black frames, frames congelados e silêncios em mídia realmente decodificada

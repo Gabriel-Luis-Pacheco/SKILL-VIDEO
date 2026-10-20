@@ -5,6 +5,7 @@
 - Incluiu quatro módulos avançados de branding e vendas, direção de edição e som, motion 2D/3D/personagens e aprendizado da qualidade com evidência.
 - Acrescentou roteador programático de briefing, parser de métricas comerciais descritivas e validador de revisão declarada por avaliadores, sem inventar causalidade nem independência.
 - Acrescentou projeto scaffold seguro com assets vazios, brief em rascunho e storyboard sem cenas inventadas.
+- Acrescentou inspeção dos sinais decodificados de mídia via FFmpeg para black/freeze/silence, sempre como alerta não estético.
 - Aprimorou video_qc para 4:5 e tags de cor, amostragem de áudio e revisão; corrigiu encerramento de pipe FFmpeg.
 - Adicionou testes sintéticos e casos negativos para precisão das métricas, proteção dos criativos e seleção de meio por tipo de cena.
 - Retém 24 roteiros originais, 16 estudos de campanha, 10 comparativos de skills, render MP4 real e QA técnico verificável.

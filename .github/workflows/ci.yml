@@ -50,6 +50,10 @@ jobs:
           python skills/ai-video-director/examples/rendered-proof/render.py --output /tmp/video-os-smoke.mp4 --width 270 --height 480 --fps 12 --stills /tmp/video-os-frames
           python skills/ai-video-director/scripts/video_qc.py /tmp/video-os-smoke.mp4 --duration 7 --aspect 9:16 --require-audio
           test "$(find /tmp/video-os-frames -name '*.png' | wc -l)" -eq 5
+      - name: Review decoded black, freeze and silence events
+        run: |
+          python skills/ai-video-director/scripts/signal_qc.py /tmp/video-os-smoke.mp4 --max-seconds 7 --report /tmp/video-os-signal-report.json
+          test -s /tmp/video-os-signal-report.json
       - name: Capture actual rendered frames and create review evidence
         run: |
           python skills/ai-video-director/scripts/evidence_capture.py /tmp/video-os-smoke.mp4 --out /tmp/video-os-review --max-frames 9 --thumb-width 150

@@ -32,6 +32,7 @@ Uma grande abertura não salva uma parte central vazia. Um vídeo tecnicamente p
 | **Métricas comerciais** | [campaign_results.py](skills/ai-video-director/scripts/campaign_results.py): relatório descritivo, taxas/custos e intervalos informativos, sem vitória causal inventada |
 | **Revisão criativa** | [independent_review.py](skills/ai-video-director/scripts/independent_review.py): observações cronometradas, distinção entre agente e avaliador humano e bloqueios críticos |
 | **Projetos editáveis** | [new_video_project.py](skills/ai-video-director/scripts/new_video_project.py): inicia projeto seguro, com pastas, brief, storyboard e manifesto vazios em vez de dados inventados |
+| **Diagnóstico de mídia** | [signal_qc.py](skills/ai-video-director/scripts/signal_qc.py) analisa quadros pretos, holds e trechos silenciosos reais sem confundir arte com erro técnico |
 | **Entregas nativas** | Verificador de mídia agora aceita 9:16, 4:5, 1:1 e 16:9 e expõe metadata de cor/áudio |
 | **Tecnologias atuais** | [66 — Modelos e ferramentas disponíveis](skills/ai-video-director/references/66-current-tool-capabilities.md), incluindo a descontinuação do Sora como produto em abril/2026 |
 | **Pesquisa de referência** | Google ABCD + System1/Aardman + pesquisa 2026 de Orlando Wood e identidade de marca; ver [fontes](docs/SOURCE_MATRIX.md) |
