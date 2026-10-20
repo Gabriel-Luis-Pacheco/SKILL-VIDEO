@@ -1,0 +1,56 @@
+{
+  "film": {
+    "file": "FICTIONAL_SAMPLE_NOT_A_REAL_REVIEW.mp4"
+  },
+  "note": "All ratings are fabricated TEST FIXTURES, never actual human evaluations.",
+  "reviewers": [
+    {
+      "id": "test_agent",
+      "reviewer_type": "agent_self_review",
+      "review_scope": "full_video_and_audio",
+      "ratings": {
+        "truth": 3,
+        "brand": 3,
+        "concept": 3,
+        "story": 3,
+        "art": 3,
+        "motion": 3,
+        "editing": 3,
+        "sound": 3,
+        "clarity": 3,
+        "payoff": 3
+      },
+      "observations": [
+        {
+          "time_s": 1.5,
+          "note": "SYNTHETIC observation. Not actual footage.",
+          "severity": "P2"
+        }
+      ]
+    },
+    {
+      "id": "test_internal",
+      "reviewer_type": "internal_human",
+      "review_scope": "full_video_and_audio",
+      "ratings": {
+        "truth": 2,
+        "brand": 2,
+        "concept": 2,
+        "story": 2,
+        "art": 2,
+        "motion": 2,
+        "editing": 2,
+        "sound": 2,
+        "clarity": 2,
+        "payoff": 2
+      },
+      "observations": [
+        {
+          "time_s": 3,
+          "note": "SYNTHETIC critical defect fixture.",
+          "severity": "P1"
+        }
+      ]
+    }
+  ]
+}

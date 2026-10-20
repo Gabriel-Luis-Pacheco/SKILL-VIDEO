@@ -1,0 +1,13 @@
+{
+  "brand": "FICTIONAL App Demonstrator",
+  "goal": "conversion",
+  "surface": "reels",
+  "central_visual": "ui",
+  "available_tools": [
+    "screen_capture",
+    "remotion",
+    "ffmpeg"
+  ],
+  "product_truth": "verified",
+  "cta_destination": "https://example.org/test"
+}
