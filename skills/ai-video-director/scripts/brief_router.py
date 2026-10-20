@@ -28,17 +28,17 @@ def route(brief):
     if not isinstance(brief,dict):
         return {"status":"FAIL","errors":["brief must be an object"]}
     goal=brief.get("goal")
-    if goal not in GOALS:errors.append("goal must be one of "+", ".join(sorted(GOALS)))
+    if not isinstance(goal,str) or goal not in GOALS:errors.append("goal must be one of "+", ".join(sorted(GOALS)))
     surface=brief.get("surface")
-    if surface not in SURFACES:errors.append("surface must be one of "+", ".join(sorted(SURFACES)))
+    if not isinstance(surface,str) or surface not in SURFACES:errors.append("surface must be one of "+", ".join(sorted(SURFACES)))
     kind=brief.get("central_visual")
-    if kind not in ASSET_KINDS:errors.append("central_visual must be one of "+", ".join(sorted(ASSET_KINDS)))
+    if not isinstance(kind,str) or kind not in ASSET_KINDS:errors.append("central_visual must be one of "+", ".join(sorted(ASSET_KINDS)))
     tools=brief.get("available_tools",[])
-    if not isinstance(tools,list) or any(t not in AVAILABLE for t in tools):
+    if not isinstance(tools,list) or any(not isinstance(t,str) or t not in AVAILABLE for t in tools):
         errors.append("available_tools must be a list of named supported tools")
         tools=[]
     truth=brief.get("product_truth","unknown")
-    if truth not in TRUTH:errors.append("product_truth must be verified, declared or unknown")
+    if not isinstance(truth,str) or truth not in TRUTH:errors.append("product_truth must be verified, declared or unknown")
     if not isinstance(brief.get("brand"),str) or not brief["brand"].strip():
         errors.append("brand/subject must be nonempty")
     if errors:return {"status":"FAIL","errors":errors}
