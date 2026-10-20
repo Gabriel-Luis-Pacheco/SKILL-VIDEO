@@ -33,6 +33,16 @@ jobs:
         run: python skills/ai-video-director/scripts/captions_lint.py skills/ai-video-director/fixtures/sample.srt
       - name: Production preflight (preview, not release)
         run: python skills/ai-video-director/scripts/production_gate.py skills/ai-video-director/fixtures/storyboard.json skills/ai-video-director/fixtures/assets.json --project-root skills/ai-video-director
+      - name: Verify goal routing, campaign analytics and review contract
+        run: |
+          python skills/ai-video-director/scripts/brief_router.py skills/ai-video-director/fixtures/brief_synthetic.json
+          python skills/ai-video-director/scripts/campaign_results.py skills/ai-video-director/fixtures/campaign_results_synthetic.json
+          python skills/ai-video-director/scripts/independent_review.py skills/ai-video-director/fixtures/review_synthetic.json
+      - name: Verify new-project scaffold is draft only
+        run: |
+          python skills/ai-video-director/scripts/new_video_project.py --out /tmp/video-os-new-project --title "Test Film" --brand "Test Studio" --goal conversion --surface reels
+          test -s /tmp/video-os-new-project/brief.json
+          test -s /tmp/video-os-new-project/storyboard.json
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
       - name: Render a real, original 7s film (CI smoke)

@@ -28,3 +28,16 @@ Priorize sites oficiais e estudos de criadores. A fonte mostra método/capacidad
 | BUCK | https://buck.co/work/riot-games-msi | Motion system e frames de hold |
 
 Não reproduzir comerciais originais, seus roteiros, músicas ou personagens. O atlas produz abstrações transferíveis e informa origem.
+
+## Research incorporated in Video OS Prime 4.0 — October 2026
+| Domain | Current research / official material | Interpretation and limits |
+|---|---|---|
+| Video effectiveness by objective | https://support.google.com/google-ads/answer/14783551 | ABCDs = attention, branding, connection, direction; guidelines are NOT automatic cinematic formulas |
+| Showmanship and long-term brand | https://business.google.com/en-all/think/future-of-marketing/orlando-wood-showmanship-research/ | Brand characters, story, humor and emotional memory as principles; applicability varies |
+| Character-led advertising | https://system1group.com/the-aardman-effect-putting-on-a-show | Research/report on Aardman campaigns; cannot promise same effect for generated content |
+| Short-form brand memory | https://system1group.com/creative-effectiveness-tiktok | Asset distinction and attention; figures are study/context-specific, not user campaign results |
+| Brand assets | https://prod1.warc.com/content/feed/distinctive-brand-assets-increase-advertising-impact/11291 | Long-term branded memory requires stable visual/sonic identities |
+| Platform-safe 9:16 | https://www.facebook.com/business/ads/facebook-instagram-reels-ads | Native orientation/audio/safe-zone principles; measurement on Meta ads, not generic |
+| Remotion actual rendering | https://www.remotion.dev/docs/render | Real CLI/SSR/Studio render options, documented as of October 2026 |
+
+Do not copy figures from these studies as forecasts for a specific user's brand. Never use a reported aggregate lift as a guarantee for the next video. The complete source atlas is in references/30-campaign-atlas.md.

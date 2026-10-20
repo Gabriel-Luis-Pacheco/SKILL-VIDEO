@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## v4.0.0 — 2026-10-20
+- Refatorou o núcleo criativo: sucesso por objetivo, uma cena memorável também no meio, identidade formal/material/cinética, prova verdadeira, mistura consciente entre showmanship e salesmanship.
+- Incluiu quatro módulos avançados de branding e vendas, direção de edição e som, motion 2D/3D/personagens e aprendizado da qualidade com evidência.
+- Acrescentou roteador programático de briefing, parser de métricas comerciais descritivas e validador de revisão declarada por avaliadores, sem inventar causalidade nem independência.
+- Acrescentou projeto scaffold seguro com assets vazios, brief em rascunho e storyboard sem cenas inventadas.
+- Aprimorou video_qc para 4:5 e tags de cor, amostragem de áudio e revisão; corrigiu encerramento de pipe FFmpeg.
+- Adicionou testes sintéticos e casos negativos para precisão das métricas, proteção dos criativos e seleção de meio por tipo de cena.
+- Retém 24 roteiros originais, 16 estudos de campanha, 10 comparativos de skills, render MP4 real e QA técnico verificável.
+- Paridade com grandes estúdios e eficácia de venda ainda não foram demonstradas por experimento cego independente.
+
 ## v3.0.0 — 2026-10-20
 - Added an end-to-end, reproducible seven-second authored motion MP4 renderer with procedural sound and deterministic frame outputs (Pillow+FFmpeg). This is an engineering study, not an ad quality certification.
 - GitHub Actions now installs FFmpeg when unavailable, renders video+audio, verifies metadata, extracts actual frames, builds a contact sheet, and stores the evidence as a downloadable workflow artifact.

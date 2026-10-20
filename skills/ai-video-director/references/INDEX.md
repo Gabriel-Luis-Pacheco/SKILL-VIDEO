@@ -42,3 +42,13 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - 61-creative-budget-router.md — cost/precision/creative choices per shot
 - ../examples/rendered-proof/README.md — end-to-end reproducible original 7-second MP4 + sound
 - ../scripts/evidence_capture.py — actual frame capture/contact sheet with SHA
+
+## Video OS Prime 4.0 — estúdio, marca e negócios
+- 62-brand-memory-and-direct-response.md — memória/distintividade de marca + venda honesta
+- 63-world-class-editing-sound-playbook.md — 5 passes de edição e som
+- 64-motion-3d-and-character-craft.md — motion 2D/3D, materiais, luz e character acting
+- 65-creative-quality-control-and-learning-loop.md — crítica causal, avaliação cega e métricas
+- ../scripts/brief_router.py — roteador conservador de objetivo e tecnologia
+- ../scripts/campaign_results.py — reporting descritivo, sem vencer campanha por decreto
+- ../scripts/independent_review.py — evidência declarada de reviews, sem falsificar independência
+- ../scripts/new_video_project.py — scaffold seguro de projeto sem conteúdo inventado
