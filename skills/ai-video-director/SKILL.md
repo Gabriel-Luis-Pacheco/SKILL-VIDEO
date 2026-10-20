@@ -52,7 +52,7 @@ A escolha tem de otimizar precisão/fidelidade, liberdade artística, custo de g
 - **Mundo imaginário/atmosfera** → 3D, live-action com composição, T2V/I2V calibrado por shot.
 - **Montagem/cor/som** → editor e ferramenta de mix/color com assets licenciados e reprodução real.
 
-Não supor ferramentas instaladas nem prometer APIs, custo, FPS ou formatos sem documentação atual. `scripts/brief_router.py` gera **um plano conservador**, não criatividade garantida. Carregar `references/61-creative-budget-router.md` quando decisão de tecnologia, custo ou risco importam.
+Não supor ferramentas instaladas nem prometer APIs, custo, FPS ou formatos sem documentação atual. **Antes de adotar tecnologia de vídeo generativo consultar references/66-current-tool-capabilities.md**, verificar documentação oficial atual, teste de acesso da conta e disponibilidade de modelo/serviço. Não recomendar Sora como produto ativo: a OpenAI informa descontinuação do produto em 26/04/2026. `scripts/brief_router.py` gera **um plano conservador**, não criatividade garantida. Carregar `references/61-creative-budget-router.md` quando decisão de tecnologia, custo ou risco importam.
 
 ## V. Pipeline de verdade: ideia → animatic → take → master
 1. Verificar fatos e assets canônicos; tratar direitos/consentimento como requisito independente de estética.

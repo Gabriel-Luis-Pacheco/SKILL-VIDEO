@@ -25,7 +25,7 @@ def validate_skill(root):
         count = len(re.findall(r"(?m)^## [0-9]{2}\. ", vault.read_text(encoding="utf-8")))
         if count < 24:
             errors.append("expected >=24 distinct example scripts, got " + str(count))
-    for needed in ("62-brand-memory-and-direct-response.md","63-world-class-editing-sound-playbook.md",
+    for needed in ("66-current-tool-capabilities.md","62-brand-memory-and-direct-response.md","63-world-class-editing-sound-playbook.md",
                    "64-motion-3d-and-character-craft.md","65-creative-quality-control-and-learning-loop.md",
                    "57-observed-visual-review.md","58-studio-creative-brain.md","59-generative-shot-supervision.md",
                    "60-directors-cut-review.md","61-creative-budget-router.md",

@@ -52,3 +52,5 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - ../scripts/campaign_results.py — reporting descritivo, sem vencer campanha por decreto
 - ../scripts/independent_review.py — evidência declarada de reviews, sem falsificar independência
 - ../scripts/new_video_project.py — scaffold seguro de projeto sem conteúdo inventado
+
+- 66-current-tool-capabilities.md — fornecedores atuais, documentação oficial, disponibilidade e ledger de capacidades por shot

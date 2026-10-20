@@ -41,3 +41,12 @@ Não reproduzir comerciais originais, seus roteiros, músicas ou personagens. O 
 | Remotion actual rendering | https://www.remotion.dev/docs/render | Real CLI/SSR/Studio render options, documented as of October 2026 |
 
 Do not copy figures from these studies as forecasts for a specific user's brand. Never use a reported aggregate lift as a guarantee for the next video. The complete source atlas is in references/30-campaign-atlas.md.
+
+## Current creative technology due diligence
+- Runway available model catalog: https://help.runwayml.com/hc/en-us/articles/48649877897107-Available-Models-on-Runway (catalog can change)
+- Google Veo version-specific model capability: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/veo/3-1-generate
+- DaVinci Resolve 21: https://www.blackmagicdesign.com/br/products/davinciresolve/whatsnew/
+- Remotion render (updated Oct 11, 2026): https://www.remotion.dev/docs/render
+- OpenAI Sora product discontinued as of Apr 26, 2026: https://openai.com/index/sora/
+
+Never claim a model is currently accessible solely because documentation exists; verify account/tool and region. The goal is a consistent, high-fidelity shot, not a provider ranking.
