@@ -38,6 +38,16 @@ Or copy `skills/ai-video-director` to your agent's skills directory. Begin at [S
 | OpenAI / Anthropic / Duolingo principles | [High-craft brand patterns](skills/ai-video-director/references/33-high-craft-brand-cases.md) |
 | Quality control | [Film review](skills/ai-video-director/references/34-qa-scorecards.md) |
 | Evaluation | [Head-to-head protocol](skills/ai-video-director/references/35-benchmark-protocol.md) |
+| Authored motion recipes | [10 kinetic mechanisms](skills/ai-video-director/references/42-procedural-motion-recipes.md) |
+| Directorial judgment | [Failure modes and deep critique](skills/ai-video-director/references/43-director-judgment-and-failure-modes.md) |
+| Real frame-based example | [Remotion motion study](skills/ai-video-director/examples/remotion-motion-study/README.md) |
+| Ready-to-use agent prompts | [Production prompts](docs/AGENT_PROMPTS.md) |
+
+## Repository contents
+
+**36 tracked files**, including 14 specialized reference guides, a 16-case advertising atlas, 24 original scripts with 102 timed beats, a frame-driven Remotion study (source only), an evaluation set with 16 adversarial briefs, metadata QC and shotlist tooling.
+
+**Important:** structural GitHub Actions checks do not validate artistic quality. The Remotion study has not been compiled/rendered as part of CI; see its README for how to render it.
 
 ## Verification
 

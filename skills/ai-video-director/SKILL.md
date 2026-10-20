@@ -51,7 +51,9 @@ Entregar arquivos realmente existentes, fontes reutilizáveis e changelog de ver
 - Estratégia, hooks e copy: references/36-hooks-creative-performance.md
 - Campanhas e comparação: references/30-campaign-atlas.md, references/33-high-craft-brand-cases.md
 - Roteiros autorais: examples/original-script-vault.md
-- Motion de alto nível: references/31-motion-masterclass.md
+- Motion de alto nível: references/31-motion-masterclass.md, references/42-procedural-motion-recipes.md
+- Direção crítica e falhas recorrentes: references/43-director-judgment-and-failure-modes.md
+- Experimento prático de motion: examples/remotion-motion-study/README.md (código não renderizado neste repositório)
 - Ferramentas/render: references/32-technology-router.md, references/39-ai-video-model-playbook.md
 - Cinema e montagem: references/37-cinematography-and-editing.md
 - Som: references/38-sound-and-mix.md
