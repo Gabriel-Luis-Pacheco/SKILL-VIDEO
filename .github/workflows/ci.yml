@@ -40,3 +40,17 @@ jobs:
           python skills/ai-video-director/examples/rendered-proof/render.py --output /tmp/video-os-smoke.mp4 --width 270 --height 480 --fps 12 --stills /tmp/video-os-frames
           python skills/ai-video-director/scripts/video_qc.py /tmp/video-os-smoke.mp4 --duration 7 --aspect 9:16 --require-audio
           test "$(find /tmp/video-os-frames -name '*.png' | wc -l)" -eq 5
+      - name: Capture actual rendered frames and create review evidence
+        run: |
+          python skills/ai-video-director/scripts/evidence_capture.py /tmp/video-os-smoke.mp4 --out /tmp/video-os-review --max-frames 9 --thumb-width 150
+          test -s /tmp/video-os-review/contact-sheet.jpg
+          test -s /tmp/video-os-review/evidence.json
+      - name: Upload preview video and evidence (technical proof)
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-os-rendered-smoke
+          path: |
+            /tmp/video-os-smoke.mp4
+            /tmp/video-os-review/contact-sheet.jpg
+            /tmp/video-os-review/evidence.json
+          retention-days: 7
