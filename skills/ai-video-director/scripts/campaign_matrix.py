@@ -37,6 +37,10 @@ def check_matrix(data):
             errors.append(pos + ": missing or duplicate id")
         else:
             ids.add(ident)
+        allowed_fields=set(NEEDED) | {"id","changed_field","hypothesis","evidence","notes"}
+        unknown=set(v)-allowed_fields
+        if unknown:
+            errors.append(pos + ": undeclared extra variant fields " + repr(sorted(unknown)))
         field = v.get("changed_field")
         if field not in FIELDS:
             errors.append(pos + ": changed_field must be one of " + ", ".join(FIELDS))

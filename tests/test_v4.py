@@ -29,6 +29,7 @@ class MetricsTest(unittest.TestCase):
         report=metrics.analyze(fixture("campaign_results_synthetic.json"))
         self.assertEqual(report["status"],"PASS")
         self.assertEqual(report["winner"],"NOT_DETERMINED")
+        self.assertEqual(report["data_provenance"],"SYNTHETIC_SAMPLE")
         self.assertEqual(report["causal_effect"],"UNKNOWN")
         self.assertEqual(report["variants"][0]["click_through_pct"],10.0)
     def test_uncertainty_bounds_are_finite(self):
@@ -85,6 +86,13 @@ class RouterTest(unittest.TestCase):
         self.assertFalse(r["blockers"])
         self.assertEqual(r["ready_for_commercial_publish"],"NOT_DETERMINED")
         self.assertEqual(r["output_status"],"PLAN_ONLY_NOT_RENDERED")
+    def test_invalid_json_types_fail_gracefully(self):
+        d=fixture("brief_synthetic.json")
+        d["goal"]=["conversion"]
+        self.assertEqual(router.route(d)["status"],"FAIL")
+        d=fixture("brief_synthetic.json")
+        d["available_tools"]=[{"tool":"malicious"}]
+        self.assertEqual(router.route(d)["status"],"FAIL")
     def test_no_real_ui_blocks(self):
         d=fixture("brief_synthetic.json")
         d["available_tools"].remove("screen_capture")

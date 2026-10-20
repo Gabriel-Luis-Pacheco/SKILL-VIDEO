@@ -98,6 +98,8 @@ def analyze(data):
         })
     if errors: return {"status":"FAIL","errors":errors}
     cautions=[
+        "SYNTHETIC TEST DATA — not real campaign observations." if data.get("fictional_example") is True else
+        "Metrics are based on the supplied data only; source authenticity is NOT verified.",
         "DESCRIPTIVE ONLY: No causal lift, statistically significant winner, ROI or ROAS inferred.",
         "Wilson intervals assume independent binomial impressions; they may be misleading with repeat viewers/auction interference.",
         "Purchase and lead attribution windows, targeting, bids, placements, creative fatigue and spend can confound comparisons.",
@@ -109,7 +111,7 @@ def analyze(data):
     if any(r["purchase_per_click_pct"] is None and r["purchases"]>0 for r in rows):
         cautions.append("Purchase counts may not be a subset of clicks; purchase/click rate withheld.")
     return {"status":"PASS","platform":platform,"period":period,"currency":currency,
-        "analysis_type":"descriptive_only","variants":rows,"limitations":cautions,
+        "analysis_type":"descriptive_only","data_provenance":"SYNTHETIC_SAMPLE" if data.get("fictional_example") is True else "USER_DECLARED_NOT_VERIFIED","variants":rows,"limitations":cautions,
         "winner":"NOT_DETERMINED","causal_effect":"UNKNOWN"}
 
 def main(argv=None):
