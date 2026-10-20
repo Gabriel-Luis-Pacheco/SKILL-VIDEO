@@ -15,3 +15,7 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - Identidade canônica, licenças e confiança: 41-brand-rights.md
 - Vault de roteiros de criação original: ../examples/original-script-vault.md
 - Formatos reais e validadores: ../scripts/shotlist_lint.py e ../scripts/validate.py.
+
+- Receitas executáveis de motion: 42-procedural-motion-recipes.md
+- Julgamento do diretor e reparo causal: 43-director-judgment-and-failure-modes.md
+- Projeto exemplo de motion code: ../examples/remotion-motion-study/README.md
