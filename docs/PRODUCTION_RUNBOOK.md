@@ -23,3 +23,13 @@ Reparar o problema mais importante e rerenderizar. Só declarar dimensões técn
 
 ## 6. Checklist de entrega
 MP4/MOV verificado, master, derivativos, legendas, fonte editável, assets canônicos, manifest e direitos, frame de thumb, notes de fontes, report PASS/FAIL/UNKNOWN e hipótese de melhoria restante. Se alguma ferramenta ausente, separar claramente o que ficou NOT RENDERED.
+
+## Version 3.0 — release evidence required
+
+For `PRODUCE` and `EXPORT`, separate **conceptual pre-production**, **real rendered cut**, **technical checks** and **creative sign-off**. The reproducible sample in `examples/rendered-proof/` proves that image and generated audio can be muxed. That example is intentionally fictional; never reuse it as a real customer testimonial, product feature or brand asset.
+
+**Preflight:** exact offer/product behavior, brand assets, target surface, medium decision per shot, timeline and asset rights. **Creative proof:** opening + middle + climax + end, sound and material signature. **Technical proof:** original compiled timeline, actual encoded output, measured fps/duration/aspect, caption structure, source assets. **Visual evidence:** use `scripts/evidence_capture.py` to see real frames. **Final review:** watch and listen to the film; a contact sheet or ffprobe alone never certifies smoothness or artistic intent.
+
+On model-generated shots use `references/59-generative-shot-supervision.md` to decide accept/reshoot/rig replacement, not unlimited regenerate. On poor results change the weakest causal layer, reexport, inspect the new master and report remaining unknowns.
+
+In CI, install FFmpeg and Pillow for the demonstration render. For actual user deliveries, preserve readable source, license information, canonical fonts/assets, and a non-fabricated QA ledger.

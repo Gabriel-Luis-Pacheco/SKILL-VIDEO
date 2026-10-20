@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## v3.0.0 — 2026-10-20
+- Added an end-to-end, reproducible seven-second authored motion MP4 renderer with procedural sound and deterministic frame outputs (Pillow+FFmpeg). This is an engineering study, not an ad quality certification.
+- GitHub Actions now installs FFmpeg when unavailable, renders video+audio, verifies metadata, extracts actual frames, builds a contact sheet, and stores the evidence as a downloadable workflow artifact.
+- Introduced a product-grounded creative director brain, shot supervision for text/image-to-video, director's-cut review by timecode, and tool/budget decision router.
+- Added an explicit task-to-deliverable contract and visual middle/payoff quality checks. Kept a small core and progressive specialist resource loading.
+- Retained the 24 original scripts, 16 campaign analyses, 10 competitor-skill study, storyboard compiler, asset, captions and ad matrix validators.
+- Independent blind quality benchmarks and commercial conversion claims: NOT RUN / UNKNOWN.
+
+
 ## v2.1.0 — 2026-10-20
 - Audited ten complementary real public video/motion agent skills at a per-file level and documented strengths and remaining limits.
 - Original operational protocols for product capture, preview-to-render, motion language, color/typography, frame evidence, FFmpeg and ad iteration.

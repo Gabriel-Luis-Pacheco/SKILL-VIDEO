@@ -33,3 +33,12 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - ../scripts/asset_preflight.py — source, canonical and rights checks
 - ../scripts/captions_lint.py — SRT validation and reading-speed warnings
 - ../scripts/production_gate.py — pipeline release preflight; actual video required
+
+## Video OS Prime 3.0: production reality + creative ceiling
+- 57-observed-visual-review.md — real contact sheet with provenance and honest unobserved status
+- 58-studio-creative-brain.md — original film mechanisms, studio direction and anti-generic reasoning
+- 59-generative-shot-supervision.md — I2V/T2V continuity, model calibration and reshoots
+- 60-directors-cut-review.md — entire film, audio, human evidence and causal revision
+- 61-creative-budget-router.md — cost/precision/creative choices per shot
+- ../examples/rendered-proof/README.md — end-to-end reproducible original 7-second MP4 + sound
+- ../scripts/evidence_capture.py — actual frame capture/contact sheet with SHA

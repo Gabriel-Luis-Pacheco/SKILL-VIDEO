@@ -2,7 +2,7 @@
 
 **AI-assisted audiovisual direction system, not a prompt collection.** Built for original ads, cinematic brand films, motion graphics, product demos, 2D/3D, trailers, social campaigns and hybrid films.
 
-> Version 2.1.0 · 2026-10-20 · Based on the [Best Designer in the World](https://github.com/Gabriel-Luis-Pacheco/Best-Designer-in-the-World.-) philosophy, expanded with specialized cinema/advertising/motion workflows.
+> Version 3.0.0 · 2026-10-20 · Based on the [Best Designer in the World](https://github.com/Gabriel-Luis-Pacheco/Best-Designer-in-the-World.-) philosophy, expanded with specialized cinema/advertising/motion workflows.
 
 ## Promise and limits
 
@@ -43,9 +43,26 @@ Or copy `skills/ai-video-director` to your agent's skills directory. Begin at [S
 | Real frame-based example | [Remotion motion study](skills/ai-video-director/examples/remotion-motion-study/README.md) |
 | Ready-to-use agent prompts | [Production prompts](docs/AGENT_PROMPTS.md) |
 
+## Version 3: from instructions to an inspectable film
+
+The v3 studio release adds a deeper film-director brain and a **real output pathway**. Beyond the source-only Remotion experiment, [the reproducible Motion Film Lab](skills/ai-video-director/examples/rendered-proof/README.md) renders a seven-second original **MP4 with actual audio** using Pillow and FFmpeg. CI renders and probes the file, captures video frames, builds a contact sheet, and uploads the technical evidence as a short-lived workflow artifact. This proves the render pipeline runs, not that an advertising film is world-class.
+
+The [creative director brain](skills/ai-video-director/references/58-studio-creative-brain.md), [AI shot supervisor](skills/ai-video-director/references/59-generative-shot-supervision.md), [director's cut review](skills/ai-video-director/references/60-directors-cut-review.md), and [production router](skills/ai-video-director/references/61-creative-budget-router.md) are selectively loaded only for relevant tasks. To review your actual final cut, use the [frame evidence capture](skills/ai-video-director/references/57-observed-visual-review.md).
+
+### Quick technical proof
+
+```bash
+python -m pip install Pillow
+python skills/ai-video-director/examples/rendered-proof/render.py --output /tmp/motion-os.mp4 --width 540 --height 960 --fps 30 --stills /tmp/motion-stills
+python skills/ai-video-director/scripts/video_qc.py /tmp/motion-os.mp4 --duration 7 --aspect 9:16 --require-audio
+python skills/ai-video-director/scripts/evidence_capture.py /tmp/motion-os.mp4 --out /tmp/motion-review
+```
+
+Read [what remains unverified](docs/KNOWN_LIMITATIONS.md). This is not a promise of "perfect", award-winning or universally better videos: that needs blind creative assessment on delivered films and real business metrics.
+
 ## Repository contents
 
-A **progressively loaded skill pack**, including 14 specialized reference guides, a 16-case advertising atlas, 24 original scripts with 102 timed beats, a frame-driven Remotion study (source only), an evaluation set with 16 adversarial briefs, metadata QC and shotlist tooling.
+A **progressively loaded skill pack**, including specialized reference guides, a 16-case advertising atlas, 24 original scripts with 102 timed beats, a frame-driven Remotion study (source only), an evaluation set with 16 adversarial briefs, metadata QC and shotlist tooling.
 
 **Important:** structural GitHub Actions checks do not validate artistic quality. The Remotion study has not been compiled/rendered as part of CI; see its README for how to render it.
 
