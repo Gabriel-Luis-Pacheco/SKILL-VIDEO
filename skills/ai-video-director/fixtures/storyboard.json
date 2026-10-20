@@ -1,0 +1,57 @@
+{
+  "schema": "video-os-storyboard-v1",
+  "title": "Original concept study, not an actual app",
+  "fps": 29.97,
+  "aspect": "9:16",
+  "target_seconds": 15,
+  "scenes": [
+    {
+      "id": "opening",
+      "seconds": 2.4,
+      "role": "hook",
+      "visual": "A real photographed object enters and interrupts empty space",
+      "sound": "Material-specific foley",
+      "render_method": "LIVE_ACTION",
+      "source_assets": [
+        "asset001"
+      ],
+      "overlay_text": ""
+    },
+    {
+      "id": "shift",
+      "seconds": 4.2,
+      "role": "progression",
+      "visual": "An authored line of force transforms two objects without faking product behavior",
+      "sound": "Percussive motif begins",
+      "render_method": "MOTION_2D",
+      "source_assets": [
+        "asset002"
+      ],
+      "overlay_text": ""
+    },
+    {
+      "id": "truth",
+      "seconds": 5.2,
+      "role": "proof",
+      "visual": "The actual product demonstrates an authorized capability",
+      "sound": "Voice pauses to let the proof land",
+      "render_method": "SCREEN_CAPTURE",
+      "source_assets": [
+        "asset003"
+      ],
+      "overlay_text": ""
+    },
+    {
+      "id": "ending",
+      "seconds": 3.2,
+      "role": "payoff",
+      "visual": "End state resolves the opening gesture; final title edited as vector",
+      "sound": "Music resolves and rests",
+      "render_method": "HYBRID",
+      "source_assets": [
+        "asset004"
+      ],
+      "overlay_text": "Produto real, sem promessas inventadas"
+    }
+  ]
+}

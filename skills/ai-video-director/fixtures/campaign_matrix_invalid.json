@@ -1,0 +1,44 @@
+{
+  "baseline": {
+    "hook": "Veja um gesto que se transforma em decisão.",
+    "benefit": "Veja o processo com contexto.",
+    "proof": "Demonstração de um fluxo real.",
+    "cta": "Conheça o fluxo.",
+    "offer": "Sem oferta promocional.",
+    "brand_id": "fictional-workshop",
+    "asset_ids": [
+      "source_capture_authorized"
+    ],
+    "theme": {
+      "typeface": "licensed-font",
+      "ink": "#101820"
+    },
+    "layout_id": "vertical-hero-v1",
+    "motion_id": "paced-edit-v1",
+    "landing_url": "https://example.org/demo",
+    "audience_id": "existing-customers"
+  },
+  "variants": [
+    {
+      "hook": "Promessa irrelevante",
+      "benefit": "Veja o processo com contexto.",
+      "proof": "Demonstração de um fluxo real.",
+      "cta": "Compre já.",
+      "offer": "Sem oferta promocional.",
+      "brand_id": "fictional-workshop",
+      "asset_ids": [
+        "source_capture_authorized"
+      ],
+      "theme": {
+        "typeface": "wrong"
+      },
+      "layout_id": "vertical-hero-v1",
+      "motion_id": "paced-edit-v1",
+      "landing_url": "https://example.org/demo",
+      "audience_id": "existing-customers",
+      "id": "broken",
+      "changed_field": "hook",
+      "hypothesis": "Two variables changed."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "video-os-assets-v1",
+  "assets": [
+    {
+      "id": "placeholder-logo",
+      "kind": "logo",
+      "source": "Illustrative internal placeholder, NOT official logo",
+      "canonical": false,
+      "rights": "pending",
+      "path": "fixtures/nonexistent-logo.svg"
+    },
+    {
+      "id": "captured-ui",
+      "kind": "screen_capture",
+      "source": "Fictional brief only, no real capture provided",
+      "canonical": false,
+      "rights": "unknown",
+      "truth": "unverified",
+      "path": "fixtures/nonexistent-ui.png"
+    }
+  ]
+}

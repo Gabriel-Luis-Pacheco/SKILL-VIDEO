@@ -1,0 +1,68 @@
+{
+  "schema": "video-os-campaign-v1",
+  "baseline": {
+    "hook": "Veja um gesto que se transforma em decisão.",
+    "benefit": "Veja o processo com contexto.",
+    "proof": "Demonstração de um fluxo real.",
+    "cta": "Conheça o fluxo.",
+    "offer": "Sem oferta promocional.",
+    "brand_id": "fictional-workshop",
+    "asset_ids": [
+      "source_capture_authorized"
+    ],
+    "theme": {
+      "typeface": "licensed-font",
+      "ink": "#101820"
+    },
+    "layout_id": "vertical-hero-v1",
+    "motion_id": "paced-edit-v1",
+    "landing_url": "https://example.org/demo",
+    "audience_id": "existing-customers"
+  },
+  "variants": [
+    {
+      "hook": "Primeiro, observe o resultado.",
+      "benefit": "Veja o processo com contexto.",
+      "proof": "Demonstração de um fluxo real.",
+      "cta": "Conheça o fluxo.",
+      "offer": "Sem oferta promocional.",
+      "brand_id": "fictional-workshop",
+      "asset_ids": [
+        "source_capture_authorized"
+      ],
+      "theme": {
+        "typeface": "licensed-font",
+        "ink": "#101820"
+      },
+      "layout_id": "vertical-hero-v1",
+      "motion_id": "paced-edit-v1",
+      "landing_url": "https://example.org/demo",
+      "audience_id": "existing-customers",
+      "id": "hook_a",
+      "changed_field": "hook",
+      "hypothesis": "A prova visual no primeiro quadro pode melhorar compreensão."
+    },
+    {
+      "hook": "Veja um gesto que se transforma em decisão.",
+      "benefit": "Veja o processo com contexto.",
+      "proof": "Demonstração de um fluxo real.",
+      "cta": "Explore a demonstração.",
+      "offer": "Sem oferta promocional.",
+      "brand_id": "fictional-workshop",
+      "asset_ids": [
+        "source_capture_authorized"
+      ],
+      "theme": {
+        "typeface": "licensed-font",
+        "ink": "#101820"
+      },
+      "layout_id": "vertical-hero-v1",
+      "motion_id": "paced-edit-v1",
+      "landing_url": "https://example.org/demo",
+      "audience_id": "existing-customers",
+      "id": "cta_a",
+      "changed_field": "cta",
+      "hypothesis": "O convite mais descritivo pode reduzir ambiguidade."
+    }
+  ]
+}
