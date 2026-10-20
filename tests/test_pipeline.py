@@ -95,6 +95,10 @@ class AssetsTests(unittest.TestCase):
         doc={"assets":[{"id":"a","kind":"image","source":"test","rights":"cleared","path":"../../etc/passwd"}]}
         errors,_=assets.check_manifest(doc,SKILL,True)
         self.assertTrue(any("traverse" in e for e in errors))
+    def test_release_fails_closed_without_project_root(self):
+        doc={"assets":[{"id":"a","kind":"image","source":"licensed local","rights":"cleared","path":"asset.png"}]}
+        errors,_=assets.check_manifest(doc,project_root=None,release=True)
+        self.assertTrue(any("--project-root" in e for e in errors))
     def test_duplicate_asset(self):
         d=fixture("assets.json")
         d["assets"][1]["id"]=d["assets"][0]["id"]

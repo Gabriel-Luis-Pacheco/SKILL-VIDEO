@@ -22,6 +22,10 @@ def check_manifest(doc, project_root=None, release=False):
     if not assets:
         return ["assets cannot be empty"], warnings
     root = Path(project_root).resolve() if project_root else None
+    if release and root is None:
+        errors.append("release requires --project-root to verify local asset bytes")
+    if release and root is not None and not root.is_dir():
+        errors.append("release project root is not an existing directory")
     seen = set()
     for index, asset in enumerate(assets):
         mark = f"assets[{index}]"
@@ -68,7 +72,8 @@ def check_manifest(doc, project_root=None, release=False):
             if not isinstance(wanted, str) or len(wanted) != 64 or any(c not in "0123456789abcdefABCDEF" for c in wanted):
                 errors.append(mark + ": sha256 must be 64 hexadecimal characters")
             else:
-                sha = hashlib.file_digest(target.open("rb"), "sha256").hexdigest()
+                with target.open("rb") as handle:
+                    sha = hashlib.file_digest(handle, "sha256").hexdigest()
                 if sha.lower() != wanted.lower():
                     errors.append(mark + ": sha256 mismatch")
         elif release:
