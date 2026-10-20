@@ -1,0 +1,124 @@
+{
+  "schema": "video-os-prime-v2-evaluation",
+  "status": "NOT_EXECUTED",
+  "controls": [
+    "same brief",
+    "same source assets",
+    "same models and versions",
+    "same budget and hardware",
+    "isolated runs",
+    "blind independent reviewers"
+  ],
+  "dimensions": [
+    "product truth",
+    "specificity",
+    "hook",
+    "narrative",
+    "payoff",
+    "art direction",
+    "motion",
+    "camera/edit",
+    "audio",
+    "accessibility",
+    "technical delivery",
+    "commercial relevance"
+  ],
+  "cases": [
+    {
+      "id": "TRUE_UI_15",
+      "brief": "SaaS 15s com UI gravada",
+      "critical_gate": "Rejeitar screenshot ou funcionalidade inventada",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CANON_CHARACTER",
+      "brief": "Mascote consistente em 6 takes",
+      "critical_gate": "Rejeitar troca de corpo/rosto entre planos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "KINETIC_PTBR",
+      "brief": "Tipografia cinética em PT-BR",
+      "critical_gate": "Rejeitar letras mutantes, acentos errados e motion sem semântica",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "DATA_MOTION",
+      "brief": "Gráfico dinâmico de dados",
+      "critical_gate": "Rejeitar escala ou número falso",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HUMAN_BRAND",
+      "brief": "Brand film humano 45s",
+      "critical_gate": "Exigir gesto memorável e marca coerente",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "SIX_SECONDS",
+      "brief": "Anúncio em 6 segundos",
+      "critical_gate": "Prova e final cabem sem clickbait",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "NATIVE_VERTICAL",
+      "brief": "16:9 refeito para 9:16",
+      "critical_gate": "Rejeitar crop que perde sujeito/legibilidade",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GENTLE_CAUSE",
+      "brief": "Adoção responsável",
+      "critical_gate": "Exigir direitos, fatos e dignidade",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "UGC_TRANSPARENCY",
+      "brief": "Creator 20s",
+      "critical_gate": "Rejeitar depoimento artificial sem transparência",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "GENERATIVE_COMPLEX",
+      "brief": "Pessoa com objeto em I2V",
+      "critical_gate": "Procurar erros temporais, materiais e anatômicos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "HIGH_END_3D",
+      "brief": "Packshot 3D de produto",
+      "critical_gate": "Material real e texto de specs comprovado",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CREATIVE_REBUILD",
+      "brief": "Refazer middle fraco",
+      "critical_gate": "Rejeitar só efeitos e sombras novos",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "SONIC_BRAND",
+      "brief": "Três filmes com som de assinatura",
+      "critical_gate": "Avaliar identidade e inteligibilidade",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "EDUCATIONAL_VIDEO",
+      "brief": "Aula com contexto",
+      "critical_gate": "Rejeitar CTA vendedor automático",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "TRAILER_FILM",
+      "brief": "Trailer 25s",
+      "critical_gate": "Exigir causalidade e clímax",
+      "status": "NOT_RUN"
+    },
+    {
+      "id": "CREDIBILITY_SENSITIVE",
+      "brief": "Vídeo saúde/finanças",
+      "critical_gate": "Priorizar evidência e consentimento",
+      "status": "NOT_RUN"
+    }
+  ]
+}
