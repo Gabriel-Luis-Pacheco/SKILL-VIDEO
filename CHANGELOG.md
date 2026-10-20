@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v2.1.0 — 2026-10-20
+- Audited ten complementary real public video/motion agent skills at a per-file level and documented strengths and remaining limits.
+- Original operational protocols for product capture, preview-to-render, motion language, color/typography, frame evidence, FFmpeg and ad iteration.
+- Storyboard-to-integer-frame compiler; creative A/B invariant validator; asset rights/provenance preflight; SRT structural and readability lint.
+- Cross-file release gate that checks references and requires real media for publication.
+- Added repeatable fixtures and regression tests. No claim of independent artistic superiority or measured ad lift.
+
+
 ## v2.0.0 — 2026-10-20
 - Primeira publicação pública em SKILL-VIDEO.
 - Motor de decisão criativa com núcleo enxuto e carregamento sob demanda.

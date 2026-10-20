@@ -19,3 +19,17 @@ Leia somente o que melhora a decisão atual. Os guias são módulos especializad
 - Receitas executáveis de motion: 42-procedural-motion-recipes.md
 - Julgamento do diretor e reparo causal: 43-director-judgment-and-failure-modes.md
 - Projeto exemplo de motion code: ../examples/remotion-motion-study/README.md
+
+## Video OS Prime 2.1 — specialist gap-closure
+- 44-top-10-skills-comparison.md — documented head-to-head, ten real skills
+- 45-production-pipeline.md — brief → source capture → plan → animatic → render → QA
+- 46-type-color-and-sound.md — Unicode type, subtitles, color science and audio
+- 47-attention-and-experiments.md — hooks, retention, looping and experiment isolation
+- 48-postproduction-and-media-qa.md — FFmpeg and postproduction safety/accuracy
+- 49-frame-evidence.md — meaningful scene event sample and evidence log
+- 50-motion-language-contract.md — art direction rules with context-dependent exceptions
+- ../scripts/timeline_compile.py — integer-frame compiler
+- ../scripts/campaign_matrix.py — controlled A/B test preflight
+- ../scripts/asset_preflight.py — source, canonical and rights checks
+- ../scripts/captions_lint.py — SRT validation and reading-speed warnings
+- ../scripts/production_gate.py — pipeline release preflight; actual video required

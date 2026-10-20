@@ -2,7 +2,7 @@
 
 **AI-assisted audiovisual direction system, not a prompt collection.** Built for original ads, cinematic brand films, motion graphics, product demos, 2D/3D, trailers, social campaigns and hybrid films.
 
-> Version 2.0.0 · 2026-10-20 · Based on the [Best Designer in the World](https://github.com/Gabriel-Luis-Pacheco/Best-Designer-in-the-World.-) philosophy, expanded with specialized cinema/advertising/motion workflows.
+> Version 2.1.0 · 2026-10-20 · Based on the [Best Designer in the World](https://github.com/Gabriel-Luis-Pacheco/Best-Designer-in-the-World.-) philosophy, expanded with specialized cinema/advertising/motion workflows.
 
 ## Promise and limits
 
@@ -45,9 +45,25 @@ Or copy `skills/ai-video-director` to your agent's skills directory. Begin at [S
 
 ## Repository contents
 
-**36 tracked files**, including 14 specialized reference guides, a 16-case advertising atlas, 24 original scripts with 102 timed beats, a frame-driven Remotion study (source only), an evaluation set with 16 adversarial briefs, metadata QC and shotlist tooling.
+A **progressively loaded skill pack**, including 14 specialized reference guides, a 16-case advertising atlas, 24 original scripts with 102 timed beats, a frame-driven Remotion study (source only), an evaluation set with 16 adversarial briefs, metadata QC and shotlist tooling.
 
 **Important:** structural GitHub Actions checks do not validate artistic quality. The Remotion study has not been compiled/rendered as part of CI; see its README for how to render it.
+
+## V2.1 — audit of ten real video/motion skills
+- [One-by-one external comparison](skills/ai-video-director/references/44-top-10-skills-comparison.md) with strengths, previous gaps, own implementation and limitations.
+- [Executable production pipeline](skills/ai-video-director/references/45-production-pipeline.md), with frame-exact storyboard compilation, asset provenance, controlled A/B creative variants, captions integrity and release preflight.
+- [Technical finishing](skills/ai-video-director/references/48-postproduction-and-media-qa.md), [color and type](skills/ai-video-director/references/46-type-color-and-sound.md), [frame evidence](skills/ai-video-director/references/49-frame-evidence.md) and [directorial motion language](skills/ai-video-director/references/50-motion-language-contract.md).
+
+### New command examples
+
+```bash
+python skills/ai-video-director/scripts/timeline_compile.py skills/ai-video-director/fixtures/storyboard.json -o /tmp/compiled-timeline.json
+python skills/ai-video-director/scripts/campaign_matrix.py skills/ai-video-director/fixtures/campaign_matrix.json
+python skills/ai-video-director/scripts/captions_lint.py skills/ai-video-director/fixtures/sample.srt
+python skills/ai-video-director/scripts/production_gate.py skills/ai-video-director/fixtures/storyboard.json skills/ai-video-director/fixtures/assets.json --project-root skills/ai-video-director
+```
+
+**Release gate:** pass `--release --video actual-render.mp4` with real licensed assets in the manifest. An incomplete sample manifest intentionally fails that gate; a structural PASS never certifies artwork, rights or conversion.
 
 ## Verification
 

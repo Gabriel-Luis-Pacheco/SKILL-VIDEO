@@ -13,7 +13,7 @@ def validate_skill(root):
     if not skill.is_file():
         return ["missing SKILL.md"]
     content = skill.read_text(encoding="utf-8")
-    for field in ("name: ai-video-director", "version: \"2.0.0\""):
+    for field in ("name: ai-video-director", "version: \"2.1.0\""):
         if field not in content:
             errors.append("missing metadata: " + field)
     for link in sorted(set(re.findall(r"(?:references|examples)/[A-Za-z0-9._-]+\.(?:md|tsx)", content))):
@@ -25,6 +25,16 @@ def validate_skill(root):
         count = len(re.findall(r"(?m)^## [0-9]{2}\. ", vault.read_text(encoding="utf-8")))
         if count < 24:
             errors.append("expected >=24 distinct example scripts, got " + str(count))
+    for needed in ("44-top-10-skills-comparison.md", "45-production-pipeline.md",
+                   "46-type-color-and-sound.md", "47-attention-and-experiments.md",
+                   "48-postproduction-and-media-qa.md", "49-frame-evidence.md",
+                   "50-motion-language-contract.md"):
+        if not (root / "references" / needed).is_file():
+            errors.append("missing specialist reference: " + needed)
+    for tool in ("timeline_compile.py", "campaign_matrix.py", "asset_preflight.py",
+                 "captions_lint.py", "production_gate.py"):
+        if not (root / "scripts" / tool).is_file():
+            errors.append("missing production validator: " + tool)
     if not atlas.is_file():
         errors.append("missing atlas")
     else:

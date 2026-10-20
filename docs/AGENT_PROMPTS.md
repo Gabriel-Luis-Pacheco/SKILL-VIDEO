@@ -14,3 +14,6 @@ Use ai-video-director; faça um filme human-first específico à marca, não ani
 
 ## Comparação rigorosa com e sem skill
 Use docs/EVALUATION_RUNBOOK.md e evals/scenarios.json, execute as duas condições com ambiente, assets, budget e modelos iguais e revisão humana cega. Não invente vitória da skill nem dados de performance comercial.
+
+## Vídeo produzido com evidência real (v2.1)
+"Use Video OS Prime v2.1, leia apenas os módulos relevantes, explore a verdade do produto, escolha 2 conceitos e justifique o mais adequado. Crie storyboard JSON e compile timecodes com timeline_compile.py; gere shots com meio adequado. Em anúncios, use campaign_matrix.py para variar só uma hipótese por teste. Faça captura da UI real e asset_preflight.py para direitos. Na edição final, confira frames/legendas/cor/áudio, exporte arquivo real e passe production_gate.py --release --video arquivo.mp4. Se não houver mídia nem rights, NÃO afirme release. Continue elevando autoria do meio e payoff; não entregue texto animado em vez de filme."

@@ -10,9 +10,19 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Compile Python tools
+        run: python -m compileall -q skills/ai-video-director/scripts tests
       - name: Validate skill structure
         run: python skills/ai-video-director/scripts/validate.py
       - name: Verify shotlist
         run: python skills/ai-video-director/scripts/shotlist_lint.py skills/ai-video-director/fixtures/valid_shotlist.json --release
+      - name: Compile frame-accurate storyboard
+        run: python skills/ai-video-director/scripts/timeline_compile.py skills/ai-video-director/fixtures/storyboard.json -o /tmp/video-os-timeline.json
+      - name: Validate controlled advertising variants
+        run: python skills/ai-video-director/scripts/campaign_matrix.py skills/ai-video-director/fixtures/campaign_matrix.json
+      - name: Validate example captions
+        run: python skills/ai-video-director/scripts/captions_lint.py skills/ai-video-director/fixtures/sample.srt
+      - name: Production preflight (preview, not release)
+        run: python skills/ai-video-director/scripts/production_gate.py skills/ai-video-director/fixtures/storyboard.json skills/ai-video-director/fixtures/assets.json --project-root skills/ai-video-director
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
