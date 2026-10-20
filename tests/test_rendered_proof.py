@@ -29,6 +29,17 @@ class RealRenderLab(unittest.TestCase):
             with wave.open(str(path),"rb") as reader:
                 self.assertEqual(reader.getnframes(),48000)
                 self.assertEqual(reader.getnchannels(),1)
+    @unittest.skipUnless(shutil.which("ffmpeg"),"FFmpeg missing")
+    def test_supported_four_by_five_aspect(self):
+        import importlib.util
+        qc_path=ROOT/"skills"/"ai-video-director"/"scripts"/"video_qc.py"
+        spec=importlib.util.spec_from_file_location("qc_4x5",qc_path)
+        qc=importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(qc)
+        with tempfile.TemporaryDirectory() as tmp:
+            sample=Path(tmp)/"four-by-five.mp4"
+            motion.render(sample,240,300,6,7)
+            self.assertEqual(qc.inspect(sample,7,"4:5",True)["status"],"PASS")
     def test_parameter_guardrails(self):
         with self.assertRaises(ValueError):
             motion.render("unused.mp4",width:=161,h:=480,fps:=30,seconds:=7)

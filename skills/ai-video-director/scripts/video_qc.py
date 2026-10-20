@@ -14,7 +14,7 @@ def inspect(path, duration=None, aspect=None, require_audio=False):
         return {"status": "FAIL", "issues": ["missing or empty file"], "unknown": ["creative quality"]}
     if shutil.which("ffprobe") is None:
         return {"status": "UNKNOWN", "issues": ["ffprobe unavailable"], "unknown": ["all media checks"]}
-    command = ["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,width,height,avg_frame_rate", "-of", "json", str(path)]
+    command = ["ffprobe", "-v", "error", "-show_entries", "format=duration:stream=codec_type,codec_name,width,height,avg_frame_rate,pix_fmt,color_range,color_space,color_transfer,color_primaries,sample_rate,channels,sample_aspect_ratio", "-of", "json", str(path)]
     try:
         run = subprocess.run(command, check=True, text=True, capture_output=True, timeout=45)
         info = json.loads(run.stdout)
@@ -38,7 +38,7 @@ def inspect(path, duration=None, aspect=None, require_audio=False):
         v = videos[0]
         if aspect:
             w,h = v.get("width"),v.get("height")
-            expected = {"9:16":9/16,"16:9":16/9,"1:1":1}.get(aspect)
+            expected = {"9:16":9/16,"4:5":4/5,"16:9":16/9,"1:1":1}.get(aspect)
             if expected is None:
                 issues.append("unsupported requested aspect")
             elif not w or not h or abs(w/h - expected) > .03:
@@ -49,13 +49,20 @@ def inspect(path, duration=None, aspect=None, require_audio=False):
             issues.append("invalid fps")
         if fps <= 0:
             issues.append("fps nonpositive")
-    return {"status": "FAIL" if issues else "PASS", "issues": issues, "metadata": {"duration_s":actual,"fps":fps,"video_streams":len(videos),"audio_streams":len(audios),"codec":videos[0].get("codec_name") if videos else None}, "unknown": ["visual craft", "sound intelligibility", "rights", "conversion", "brand fidelity"]}
+    return {"status": "FAIL" if issues else "PASS", "issues": issues, "metadata": {"duration_s":actual,"fps":fps,"video_streams":len(videos),"audio_streams":len(audios),"codec":videos[0].get("codec_name") if videos else None,
+        "pixel_format":videos[0].get("pix_fmt") if videos else None,
+        "color_range":videos[0].get("color_range") if videos else None,
+        "color_primaries":videos[0].get("color_primaries") if videos else None,
+        "color_transfer":videos[0].get("color_transfer") if videos else None,
+        "color_space":videos[0].get("color_space") if videos else None,
+        "audio_sample_rate":audios[0].get("sample_rate") if audios else None,
+        "audio_channels":audios[0].get("channels") if audios else None}, "unknown": ["visual craft", "sound intelligibility", "rights", "conversion", "brand fidelity"]}
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("file",type=Path)
     ap.add_argument("--duration",type=float)
-    ap.add_argument("--aspect",choices=["9:16","16:9","1:1"])
+    ap.add_argument("--aspect",choices=["9:16","4:5","16:9","1:1"])
     ap.add_argument("--require-audio",action="store_true")
     args = ap.parse_args()
     result = inspect(args.file,args.duration,args.aspect,args.require_audio)

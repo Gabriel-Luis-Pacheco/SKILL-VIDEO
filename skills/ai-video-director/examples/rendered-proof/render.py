@@ -141,11 +141,13 @@ def render(output,w=540,h=960,fps=30,seconds=7.0,font=None,stills=None):
                 proc.stdin.write(image.tobytes())
             proc.stdin.close()
             log=proc.stderr.read().decode("utf-8",errors="replace")
+            proc.stderr.close()
             rc=proc.wait()
         except (OSError,BrokenPipeError):
             proc.kill();proc.wait();raise
         finally:
             if proc.stdin and not proc.stdin.closed:proc.stdin.close()
+            if proc.stderr and not proc.stderr.closed:proc.stderr.close()
         if rc:raise RuntimeError("ffmpeg failed: "+log[-1000:])
     if not output.is_file() or output.stat().st_size==0:
         raise RuntimeError("Render created no MP4")
